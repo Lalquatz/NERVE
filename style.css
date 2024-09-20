@@ -6,20 +6,22 @@ body{
     text-align: center;
 }
 .escolha{
-    text-align: center;
     font-size: 40px;
     margin: 50px;
-    
+    display: flex;
+    justify-content: center;
 }
 .jogador a{
-    color: darkgoldenrod;
+    color: #e09ce1;
    margin-right: 20px;
    margin-left: 20px;
+   text-decoration: none;
 }
 .espectador a{
-   color: darkorchid;
+   color: #731a76 ; /*#9618a2  #731a76 #e09ce1   */
    margin-right: 20px;
    margin-left: 20px;
+   text-decoration: none;
 }
 .escolha a:hover {
     color: #ffffff;
@@ -27,4 +29,5 @@ body{
 .pag-login{
     text-align: center;
     margin-top: 80px;
+    background-image: url(img/fundo\ hack\ rosa.png);
 }
