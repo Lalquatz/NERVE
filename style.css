@@ -25,9 +25,14 @@ body{
 }
 .escolha a:hover {
     color: #ffffff;
+    filter: drop-shadow(0 0 0.50rem crimson);
 }
 .pag-login{
     text-align: center;
-    margin-top: 80px;
+    margin-top: 250px;
+}
+body.login{
     background-image: url(img/fundo\ hack\ rosa.png);
+    background-size: cover;
+   
 }
