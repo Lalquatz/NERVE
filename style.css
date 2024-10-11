@@ -10,6 +10,7 @@ body{
     margin: 50px;
     display: flex;
     justify-content: center;
+    
 }
 .jogador a{
     color: #e09ce1;
@@ -29,8 +30,10 @@ body{
 }
 .pag-login{
     text-align: center;
-    margin-top: 250px;
-    
+    margin-top: 150px;
+}
+.pag-login a{
+    color: aqua;
 }
 body.login{
     background-image: url(img/fundo\ hack\ rosa.png);
@@ -39,13 +42,16 @@ body.login{
 }
 .pag-cadastro{
     text-align: center;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 .pag-login a:hover{
     color: #ffffff;
     filter: drop-shadow(0 0 0.50rem crimson);
 }
-body.inicio{
+body.inicioj{
+    background-color: #000000;
+}
+body.inicioe{
     background-color: #000000;
 }
 
