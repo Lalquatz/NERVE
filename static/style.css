@@ -1,0 +1,57 @@
+body{
+    background-color: #000000;
+    color: #ffffff;
+}
+.pag-inicial{
+    text-align: center;
+}
+.escolha{
+    font-size: 40px;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+.jogador a{
+    color: #e09ce1;
+   margin-right: 20px;
+   margin-left: 20px;
+   text-decoration: none;
+}
+.espectador a{
+   color: #731a76 ; /*#9618a2  #731a76 #e09ce1   */
+   margin-right: 20px;
+   margin-left: 20px;
+   text-decoration: none;
+}
+.escolha a:hover {
+    color: #ffffff;
+    filter: drop-shadow(0 0 0.50rem crimson);
+}
+.pag-login{
+    text-align: center;
+    margin-top: 150px;
+}
+.pag-login a{
+    color: rgb(38, 0, 255);
+}
+body.login{
+    background-image: url(img/fundo\ hack\ rosa.png);
+    background-size: cover;
+
+}
+.pag-cadastro{
+    text-align: center;
+    margin-top: 100px;
+}
+.pag-login a:hover{
+    color: #ffffff;
+    filter: drop-shadow(0 0 0.50rem crimson);
+}
+body.inicioj{
+    background-color: #000000;
+}
+body.inicioe{
+    background-color: #000000;
+}
+
