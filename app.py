@@ -12,6 +12,14 @@ def home():
 def jogador():
     return render_template('jogador.html')
 
+@app.route('/espectador')
+def espectador():
+    return render_template('espectador.html')
+
+@app.route('/cadastro')
+def cadastro():
+    return render_template('cadastro.html')
+
 
 #parte principal do programa em python
 if __name__ == '__main__':
