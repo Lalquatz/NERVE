@@ -3,6 +3,12 @@ from flask import Flask, render_template, request
 
 app =  Flask(__name__)
 
+usuarios = {
+    'admin' : 'admin',
+    'usuario' : 'senha',
+    'leonardo' : '1234',
+}
+
 #definindo a rota principal do site
 @app.route('/')
 def home():
@@ -16,10 +22,17 @@ def jogador():
 def espectador():
     return render_template('espectador.html')
 
-@app.route('/cadastro')
+@app.route('/cadastroj')
 def cadastro():
-    return render_template('cadastro.html')
+    return render_template('cadastroj.html')
 
+@app.route('/login')
+def login():
+    return render_template('login')
+
+@app.route('/verificar-login', methods=['POST'])
+def verificar_login():
+    return render_template('verificar-login')
 
 #parte principal do programa em python
 if __name__ == '__main__':
