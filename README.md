@@ -23,3 +23,19 @@ Neste repositório está implementando o sistema do app nerve dentro do filme ne
 4. Escolha o repositório do projeto para clonar.
 
 5. Deseja abrir o repositório clonado? Abrir
+
+### Instalar a biblioteca do python
+1. Clique em "Extenções" no menu a esquerda ou CTRL+SHIFT+X
+2. Procure por "Python"
+3. Clique em " Instalar"
+
+### Instalar a biblioteca Flask
+1. Abrir um novo terminal: Barra de ferramentas > Três pontinhos >
+Terminal > Novo Terminal
+
+2. Digite o comando ``pip install flask --user`` e pressione enter
+
+### Configurando Git
+`git config user.name seu_usuario`
+
+`git config user.email seu_nome@email.com`

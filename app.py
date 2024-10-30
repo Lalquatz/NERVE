@@ -23,8 +23,12 @@ def espectador():
     return render_template('espectador.html')
 
 @app.route('/cadastroj')
-def cadastro():
+def cadastroj():
     return render_template('cadastroj.html')
+
+@app.route('/cadastroe')
+def cadastroe():
+    return render_template('cadastroe.html')
 
 @app.route('/login')
 def login():
@@ -32,7 +36,13 @@ def login():
 
 @app.route('/verificar-login', methods=['POST'])
 def verificar_login():
-    return render_template('verificar-login')
+    username = request.form['username']
+    password = request.form['password']
+
+    if username in usuarios and usuarios[username] == password:
+        return f"Bem-vindo, {username}!"
+    else:
+        return "Usuário ou senha inválidos."
 
 #parte principal do programa em python
 if __name__ == '__main__':
