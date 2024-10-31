@@ -1,5 +1,5 @@
 #importando a biblioteca do flask para fazer um si
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 app =  Flask(__name__)
 
@@ -32,17 +32,43 @@ def cadastroe():
 
 @app.route('/login')
 def login():
-    return render_template('login')
+    return render_template('login.html')
 
-@app.route('/verificar-login', methods=['POST'])
-def verificar_login():
+@app.route('/inicioj')
+def inicioj():
+    return render_template('inicioj.html')
+
+@app.route('/inicioe')
+def inicioe():
+    return render_template('inicioe.html')
+
+@app.route('/jogadorerro')
+def jogadorerro():
+    return render_template('jogadorerro.html')
+
+@app.route('/espectadorerro')
+def espectadorerro():
+    return render_template('espectadorerro.html')
+
+@app.route('/verificar-loginj', methods=['POST'])
+def verificar_loginj():
     username = request.form['username']
     password = request.form['password']
 
     if username in usuarios and usuarios[username] == password:
-        return f"Bem-vindo, {username}!"
+        return redirect(url_for("inicioj"))
     else:
-        return "Usuário ou senha inválidos."
+        return redirect(url_for("jogadorerro"))
+    
+@app.route('/verificar-logine', methods=['POST'])
+def verificar_logine():
+    username = request.form['username']
+    password = request.form['password']
+
+    if username in usuarios and usuarios[username] == password:
+        return redirect(url_for("inicioe"))
+    else:
+        return redirect(url_for("espectadorerro"))
 
 #parte principal do programa em python
 if __name__ == '__main__':

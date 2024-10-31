@@ -10,16 +10,17 @@
 <body class="login">
 
     <div class="pag-login">
+        <form action="/verificar-loginj" method="post">
         <h1>VOCÊ ESCOLHEU JOGADOR</h1>
-        <h1>Email ou Usuário</h1>
-        <input type="">
-        <h1>Senha</h1>
-        <input type="">
+        <h2>Email ou Usuário</h2>
+        <input type="text" id='username' name='username' placeholder="Digite seu usuario">
+        <h2>Senha</h2>
+        <input type="password" id='password' name="password" placeholder="Digite sua senha">
         <h2></h2>
-        <a  href="/inicioj">
-            <input class="styled" type="button" value="Confirmar" /></a>
+            <input class="styled" type="submit" value="Confirmar" />
     <h2>ou</h2>
     <a href="/cadastroj">Cadastrar-se</a>
+        </form>
     </div>
 </body>
 </html>
