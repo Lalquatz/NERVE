@@ -16,7 +16,18 @@
         <input type="text" id='username' name='username' placeholder="Digite seu usuario">
         <h2>Senha</h2>
         <input type="password" id='password' name="password" placeholder="Digite sua senha">
-        <h2></h2>
+        <br>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="resposta">
+            {% for messages in messages %}
+            <p>{{message}}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        {% block body %} {% endblock %}
+        <br>
             <input class="styled" type="submit" value="Confirmar" />
     <h2>ou</h2>
     <a href="/cadastroj">Cadastrar-se</a>

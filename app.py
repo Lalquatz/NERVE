@@ -1,7 +1,8 @@
 #importando a biblioteca do flask para fazer um si
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 app =  Flask(__name__)
+app.secret_key = "chave_muito_segura"
 
 usuarios = {
     'admin' : 'admin',
@@ -42,14 +43,6 @@ def inicioj():
 def inicioe():
     return render_template('inicioe.html')
 
-@app.route('/jogadorerro')
-def jogadorerro():
-    return render_template('jogadorerro.html')
-
-@app.route('/espectadorerro')
-def espectadorerro():
-    return render_template('espectadorerro.html')
-
 @app.route('/verificar-loginj', methods=['POST'])
 def verificar_loginj():
     username = request.form['username']
@@ -58,7 +51,8 @@ def verificar_loginj():
     if username in usuarios and usuarios[username] == password:
         return redirect(url_for("inicioj"))
     else:
-        return redirect(url_for("jogadorerro"))
+        flash('usuário ou senha incorreto(s)', 'danger')
+        return redirect(url_for("jogador"))
     
 @app.route('/verificar-logine', methods=['POST'])
 def verificar_logine():
@@ -68,7 +62,8 @@ def verificar_logine():
     if username in usuarios and usuarios[username] == password:
         return redirect(url_for("inicioe"))
     else:
-        return redirect(url_for("espectadorerro"))
+        flash('usuário ou senha incorreto(s)', 'danger')
+        return redirect(url_for("espectador"))
 
 #parte principal do programa em python
 if __name__ == '__main__':
